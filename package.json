@@ -1,0 +1,21 @@
+{
+  "name": "yelpmap",
+  "version": "1.0.0",
+  "description": "Pulls Location Data from Yelp API for restaurants in top100.txt. See http://blog.sandeepchivukula.com/post/2015/01/28/mapping-100-hottest-places-to-eat/",
+  "main": "yelpmap.js",
+  "dependencies": {
+    "yelp": "^0.1.1",
+    "async": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yelp",
+    "api",
+    "json"
+  ],
+  "author": "Sandeep Chivukula",
+  "license": "ISC"
+}
