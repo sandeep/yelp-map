@@ -1,0 +1,29 @@
+<!-- Little Stub to Display the Data --> 
+
+<div id="map"></div>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<style> #map { height: 480px; width: 100%; } </style>
+<script>
+function initialize ()
+{
+var southWest = L.latLng(15, -170),
+    northEast = L.latLng(40, -50),
+    bounds = L.latLngBounds(southWest, northEast);
+
+  var map = L.map('map',{center:[34, -94], zoom:3, maxBounds:bounds, minZoom:3});
+
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  //Be sure you've loaded JQuery
+  $.getJSON("/yelp-api-output.json", function(json) {
+    json.forEach(function(item){
+      var marker = L.marker([item.coordinates.latitude,item.coordinates.longitude]).addTo(map);
+      marker.bindPopup("<div><p><a href="+item.url+"><em style=\"margin:0\">"+item.name+"</em></a><br><small>"+item.address.pop().match(/(.*\, \w\w).*/)[1]+"   </small><br><img src="+item.rating_img_url+"></a><br><img  src=\"http://s3-media3.fl.yelpcdn.com/assets/2/www/img/3049d7633b6e/developers/reviewsFromYelpRED.gif\"></p></div>");
+    });
+  });
+}
+window.onload = initialize;
+</script>
