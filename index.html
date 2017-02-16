@@ -1,29 +1,73 @@
-<!-- Little Stub to Display the Data --> 
+<!-- Little Stub to Display the Data -->
 
 <div id="map"></div>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+
 <style> #map { height: 480px; width: 100%; } </style>
 <script>
-function initialize ()
+
+function addYelpData (L, options, callback)
 {
-var southWest = L.latLng(15, -170),
-    northEast = L.latLng(40, -50),
-    bounds = L.latLngBounds(southWest, northEast);
-
-  var map = L.map('map',{center:[34, -94], zoom:3, maxBounds:bounds, minZoom:3});
-
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  var year = options.year || '2017';
+  var fill=options.color || '#f03';
+  var color = (fill & 0xfe) >> 1;
 
   //Be sure you've loaded JQuery
-  $.getJSON("/yelp-api-output.json", function(json) {
+  $.getJSON("/yelp-api-output-"+year+".json", function(json) {
+    var markers=[];
     json.forEach(function(item){
-      var marker = L.marker([item.coordinates.latitude,item.coordinates.longitude]).addTo(map);
+      var marker = L.circleMarker([item.coordinates.latitude,item.coordinates.longitude],{
+        color: color,
+        fillColor: fill,
+        fillOpacity: 0.5,
+      }).setRadius(5);
       marker.bindPopup("<div><p><a href="+item.url+"><em style=\"margin:0\">"+item.name+"</em></a><br><small>"+item.address.pop().match(/(.*\, \w\w).*/)[1]+"   </small><br><img src="+item.rating_img_url+"></a><br><img  src=\"http://s3-media3.fl.yelpcdn.com/assets/2/www/img/3049d7633b6e/developers/reviewsFromYelpRED.gif\"></p></div>");
+      markers.push(marker);
+
     });
+    callback({ "year": year, "layer":L.layerGroup(markers)})
   });
+
 }
+function initialize ()
+{
+  var southWest = L.latLng(14, -170),
+  northEast = L.latLng(60, -50),
+  bounds = L.latLngBounds(southWest, northEast),
+  mapZoom = 4;
+
+  var color_palette=['#45CCFF','#49E83E','#FFD432','#E84B30']
+
+  var base= L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    ext:'png',
+    subdomains: 'abcd'
+  });
+
+  var labels= L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.{ext}', {
+    ext:'png',
+    subdomains: 'abcd'
+  });
+
+  var map = L.map('map',{center:[34, -94], zoom: mapZoom, maxBounds:bounds, minZoom:2,layers: [base,labels]});
+
+  var cl =  L.control.layers(undefined,undefined,{collapsed:false, autoZIndex:false})
+
+  var years =["2015","2017"]
+
+  years.forEach(function(element,index)
+  {
+    addYelpData(L,{year:element, color:color_palette[index]}, function(data){
+      cl.addOverlay(data.layer,"<span style=background:"+color_palette[index]+";padding-left:10px></span>"+data.year);
+      data.layer.addTo(map);
+    });
+  })
+
+  cl.addTo(map);
+
+}
+
 window.onload = initialize;
+
 </script>
