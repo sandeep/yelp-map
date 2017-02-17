@@ -10,6 +10,7 @@ yelp = require("yelp").createClient({
 var year = process.argv[2] || 2017;
 var  RegEx=[], out = [];
 RegEx['2015'] = /\d+\.\s(.*)\s–\s(.*)/;
+RegEx['2016'] = /\d+\.\s(.*)\,\s(.*\,\s.*)/;
 RegEx['2017'] = /(.*)\s\–\s(.*)/;
 
 fs.readFile('top100-'+year+'.txt', 'utf8', function (err, data) {
@@ -20,6 +21,7 @@ fs.readFile('top100-'+year+'.txt', 'utf8', function (err, data) {
         function (data, next) {
             var search_terms = [];
             search_terms = RegEx[year].exec(data);
+            if (!search_terms) {console.log("search_terms: ",search_terms) ; throw(err);}
             search_yelp(search_terms, function (resp) {
                 out.push(resp);
                 next();

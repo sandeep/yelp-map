@@ -1,0 +1,100 @@
+1. Porto’s Bakery & Cafe, Burbank, CA
+2. Cheese Board Pizza, Berkeley, CA
+3. Paseo, Seattle, WA
+4. Joe’s Kansas City Bar-B-Que, Kansas City, KS
+5. TKB Bakery & Deli, Indio, CA
+6. Gary Danko, San Francisco, CA
+7. The Morrison, Los Angeles, CA
+8. Mama D’s Italian Kitchen, Newport Beach, CA
+9. Franklin Barbecue, Austin, TX
+10. Marukame Udon, Honolulu, HI
+11. Cream Pan, Tustin, CA
+12. Dametra Cafe, Carmel, CA
+13. Little Miss BBQ, Phoenix, AZ
+14. Ono Seafood, Honolulu, HI
+15. Da Poke Shack, Kailua-Kona, HI
+16. Los Agaves, Santa Barbara, CA
+17. Tacos El Gordo, Chula Vista, CA
+18. Bogart’s Smokehouse, Saint Louis, MO
+19. Alinea, Chicago, IL
+20. Joe’s Falafel, Los Angeles, CA
+21. Baguette Cafe, Las Vegas, NV
+22. Halls Chophouse, Charleston, SC
+23. Aviva by Kameel, Atlanta, GA
+24. Ike’s Place, San Francisco, CA
+25. Adobo Taco Grill, Lakewood, CA
+26. Kokkari Estiatorio, San Francisco, CA
+27. Mr BBQ, Fullerton, CA
+28. El Dorado Cantina, Las Vegas, NV
+29. Pappy’s Smokehouse, Saint Louis, MO
+30. T Deli, San Diego, CA
+31. Oscar’s Mexican Seafood, San Diego, CA
+32. Gramercy Tavern, New York, NY
+33. Screen Door, Portland, OR
+34. Le Bernardin, New York, NY
+35. Mama’s Fish House Restaurant, Paia, HI
+36. Gaucho Parrilla Argentina, Pittsburgh, PA
+37. Gen Korean BBQ House, Cerritos, CA
+38. Girl & the Goat, Chicago, IL
+39. Langer’s, Los Angeles, CA
+40. Los Tacos No.1, New York, NY
+41. Bakery Nouveau, Seattle, WA
+42. Sushi Ota, San Diego, CA
+43. Istanbul Grill California, Fountain Valley, CA
+44. Mr. Mamas, Las Vegas, NV
+45. Arun’s Indian Kichen, Coral Springs, FL
+46. Cochon Butcher, New Orleans, LA
+47. Coop’s West Texas Barbeque, Lemon Grove, CA
+48. Kenny’s Wood Fired Grill, Dallas, TX
+49. Yardbird Southern Table & Bar, Miami Beach, FL
+50. Beach Break Cafe, Oceanside, CA
+51. Johnny Pacific, Winnetka, CA
+52. Outlaws Cafe, Van Nuys, CA
+53. Lou’s Cafe, San Francisco, CA
+54. Los Andes Restaurant, Providence, RI
+55. Arizmendi Bakery, San Francisco, CA
+56. Lahaina Grill, Lahaina, HI
+57. The French Laundry, Yountville, CA
+58. Gus’s World Famous Hot & Spicy Chicken, Memphis, TN
+59. Uchi, Austin, TX
+60. Rockfire Grill, Mission Viejo, CA
+61. El Chato Taco Truck, Los Angeles, CA
+62. Zahav, Philadelphia, PA
+63. Helena’s Hawaiian Food, Honolulu, HI
+64. Sal, Kris, & Charlie’s Deli, Astoria, NY
+65. Providence, Los Angeles, CA
+66. Zacatecas Restaurant, Hawthorne, CA
+67. Monell’s Dining & Catering, Nashville, TN
+68. Phil’s BBQ, San Diego, CA
+69. Per Se, New York, NY
+70. Daniel, New York, NY
+71. Yoshino Japanese Deli, Carlsbad, CA
+72. Eleven Madison Park, New York, NY
+73. Kang Ho Dong Baekjeong, Los Angeles, CA
+74. Cafe Rolle, Sacramento, CA
+75. Chama Gaúcha Brazilian Steakhouse, Houston, TX
+76. Musubi Cafe Iyasume, Honolulu, HI
+77. Wally’s Cafe, Emeryville, CA
+78. Mastro’s Steakhouse Beverly Hills Penthouse, Beverly Hills, CA
+79. Neptune Oyster, Boston, MA
+80. Oyster Bar, Las Vegas, NV
+81. Pike Place Chowder, Seattle, WA
+82. The Halal Guys, New York, NY
+83. The Codmother Fish and Chips, San Francisco, CA
+84. Shark Pit Maui, Lahaina, HI
+85. Farmstead at Long Meadow Ranch, Saint Helena, CA
+86. Genwa Korean BBQ, Los Angeles, CA
+87. Little Lucca Sandwich Shop & Deli, South San Francisco, CA
+88. Bobby Q, Phoenix, AZ
+89. Umeke’s, Kailua-Kona, HI
+90. Root Down, Denver, CO
+91. Tar & Roses, Santa Monica, CA
+92. Leoda’s Kitchen and Pie Shop, Lahaina, HI
+93. The Waffle Window, Portland, OR
+94. Café Besalu, Seattle, WA
+95. Roxie Food Center, San Francisco, CA
+96. Blues City Deli, Saint Louis, MO
+97. Uchiko, Austin, TX
+98. Bavette’s Bar & Boeuf, Chicago, IL
+99. 39 Degrees, Long Beach, CA
+100. DishDash, Sunnyvale, CA
